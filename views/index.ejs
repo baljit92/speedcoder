@@ -2,12 +2,32 @@
 <html>
 <head>
 	<title><%= title %></title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 </head>
 <body>
-	<h1><%= title %></h1>
-	<a id="startgame" href="/race">Start Racing!</a>
+	<!-- <h1><%= title %></h1> -->
+	<script>
+	FB.ui(
+  {
+    method: 'feed',
+    name: 'Facebook Dialogs',
+    link: 'https://developers.facebook.com/docs/dialogs/',
+    picture: 'http://fbrell.com/f8.jpg',
+    caption: 'Reference Documentation',
+    description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
+  },
+  function(response) {
+    if (response && response.post_id) {
+      alert('Post was published.');
+    } else {
+      alert('Post was not published.');
+    }
+  }
+);</script>
+	<div id="gameStart"><a href="/race" id="startgame" class="raceButton">Let's Race!</a></div>
+
+	<!-- <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="icon"></div> -->
 </body>
 </html>
