@@ -3,6 +3,7 @@
 */
 var execSync = require('execSync');
 var fs = require('fs');
+var database = require('./database');
 
 exports.compiler = function(req, res){
 	var code = req.param("code");
@@ -26,5 +27,9 @@ exports.compiler = function(req, res){
 	console.log(output);
 	
 	// Client side output
-	res.send(output);
+	console.log(output.stdout + " " + database.answers[questionID])
+	if(output.stdout == database.answers[questionID])
+		res.send("Correct");
+	else
+		res.send("Incorrect");
 };

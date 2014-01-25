@@ -16,7 +16,7 @@ $( document ).ready(function() {
 			url: "/code_submit",
 			data: {questionID: questionID, code:editor.getValue()}
 		}).done(function(res) {
-			console.log(res.stdout);
+			console.log(res);
 		});
 	});
 });
