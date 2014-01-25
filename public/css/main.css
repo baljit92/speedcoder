@@ -51,3 +51,24 @@ body
 {
 	clear:both;
 }
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+  
+}
+
+.collapse .navbar-collapse
+{
+	height: 50px;
+}
+
+#logo
+{ 
+	margin-top: 10px;
+	height: 30px;
+}

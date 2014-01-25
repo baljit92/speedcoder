@@ -27,6 +27,16 @@ function submitCode() {
 		data: {questionID: questionID, code:editor.getValue()}
 	}).done(function(res) {
 		console.log(res);
+		if(res == "Incorrect")
+		{
+			$("#status").html("Incorrect Answer!")
+			$("#status").css("color","red");
+		}
+		else
+		{
+			$("#status").html("Congratulations!");
+			$("#status").css("color","green");
+		}
 	});
 }
 
