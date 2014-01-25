@@ -1,0 +1,20 @@
+body
+{
+	height: 100%;
+}
+
+#editor { 
+	width: 45%;
+	height: 500px;
+	float: left;
+	margin-left: 3%;
+}
+
+
+#remoteEditor { 
+	float: right;
+	width: 45%;
+	height: 500px;
+	margin-right: 3%;
+}
+
