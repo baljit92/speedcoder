@@ -5,7 +5,7 @@
 var database = require('./database');
 
 exports.index = function(req, res){
-	database.currentUser += 1;
+	database.gameWinner = -1;
 	res.render('index', { title: 'SpeedCoder'});
 };
 
