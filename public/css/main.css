@@ -18,3 +18,9 @@ body
 	margin-right: 3%;
 }
 
+#compileButton {
+	clear: both;
+	background-color: red;
+	height: 50px;
+	width: 100px;
+}

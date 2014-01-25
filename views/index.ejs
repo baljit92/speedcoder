@@ -7,11 +7,16 @@
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/ace/ace.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var questionID = <%= questionID %>;
+	</script>
 </head>
 <body>
 	<h1><%= title %></h1>
+	<p><%= question %></p>
 	<div id="editor"></div>
 	<div id="remoteEditor"></div>
+	<div id="compileButton">Compile!</div>
 	<!--p>Welcome to <%= title %></p-->
 </body>
 </html>
