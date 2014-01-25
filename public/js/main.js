@@ -32,7 +32,7 @@ function sendLocalCode()
 		url: "/add_code",
 		data: {userID: userID, code:editor.getValue()}
 	}).done(function(res) {
-		console.log(res);
+		//console.log(res);
 	});
 }
 
