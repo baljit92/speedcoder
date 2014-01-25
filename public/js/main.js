@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
 	remoteEditor = ace.edit("remoteEditor");
 	remoteEditor.setTheme("ace/theme/monokai");
-	remoteEditor.getSession().setMode("ace/mode/python");
+	//remoteEditor.getSession().setMode("ace/mode/python");
 	remoteEditor.setReadOnly(true);
 
 	setInterval(sendLocalCode, 1000);
@@ -28,21 +28,22 @@ $( document ).ready(function() {
 function sendLocalCode()
 {
 	$.ajax({
-			type: "POST",
-			url: "/add_code",
-			data: {userID: userID, code:editor.getValue()}
-		}).done(function(res) {
-			console.log(res);
-		});
+		type: "POST",
+		url: "/add_code",
+		data: {userID: userID, code:editor.getValue()}
+	}).done(function(res) {
+		console.log(res);
+	});
 }
 
 function updateRemoteCode()
 {
 	$.ajax({
-			type: "POST",
-			url: "/get_code",
-			data: {userID: userID}
-		}).done(function(res) {
-			remoteEditor.setValue(res);
-		});
+		type: "POST",
+		url: "/get_code",
+		data: {userID: userID}
+	}).done(function(res) {
+		remoteEditor.setValue(res);
+		remoteEditor.clearSelection();
+	});
 }
