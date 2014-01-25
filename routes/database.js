@@ -3,8 +3,10 @@ var questions = ['If we list all the natural numbers below 10 that are multiples
 var answers = ['233168\n','4613732\n'];
 var codeSnippets = ['',''];
 var currentUser = 0;
+var gameWinner = -1;
 
 exports.questions = questions;
 exports.answers = answers;
 exports.codeSnippets = codeSnippets;
 exports.currentUser = currentUser;
+exports.gameWinner = gameWinner;

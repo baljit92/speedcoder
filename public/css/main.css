@@ -18,7 +18,7 @@ body
 	height: 500px;
 	margin-right: 3%;
 	color: transparent;
-	text-shadow: 0 0 5px rgba(255,255,255,0.5);
+	text-shadow: 0 0 5px rgba(150,150,150,0.5);
 }
 
 #question {
@@ -69,6 +69,7 @@ body
 
 #logo
 { 
+	margin-left: -70px;
 	margin-top: 10px;
 	height: 30px;
 }

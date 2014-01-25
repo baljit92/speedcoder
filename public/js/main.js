@@ -13,8 +13,8 @@ $( document ).ready(function() {
 	remoteEditor.setReadOnly(true);
 	document.getElementById('remoteEditor').style.fontSize='16px';
 
-	setInterval(sendLocalCode, 1000);
-	setInterval(updateRemoteCode, 1000);
+	setInterval(sendLocalCode, 500);
+	setInterval(updateRemoteCode, 500);
 
 	// $("#compileButton").click();
 });
@@ -24,7 +24,7 @@ function submitCode() {
 	$.ajax({
 		type: "POST",
 		url: "/code_submit",
-		data: {questionID: questionID, code:editor.getValue()}
+		data: {questionID: questionID, code:editor.getValue(), userID: userID}
 	}).done(function(res) {
 		console.log(res);
 		if(res == "Incorrect")
@@ -58,7 +58,13 @@ function updateRemoteCode()
 		url: "/get_code",
 		data: {userID: userID}
 	}).done(function(res) {
-		remoteEditor.setValue(res);
+		remoteEditor.setValue(res.code);
+		console.log(res);
+		if(res.winner != -1 && res.winner != userID)
+		{
+			$("#status").html("Opponent Won!");
+			$("#status").css("color","orange");
+		}
 		remoteEditor.clearSelection();
 	});
 }

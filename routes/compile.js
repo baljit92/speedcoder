@@ -8,6 +8,7 @@ var database = require('./database');
 exports.compiler = function(req, res){
 	var code = req.param("code");
 	var questionID = req.param("questionID");
+	var userID = req.param("userID");
 
 	console.log(code);
 
@@ -29,7 +30,10 @@ exports.compiler = function(req, res){
 	// Client side output
 	console.log(output.stdout + " " + database.answers[questionID])
 	if(output.stdout == database.answers[questionID])
+	{
+		database.gameWinner = userID;
 		res.send("Correct");
+	}
 	else
 		res.send("Incorrect");
 };
