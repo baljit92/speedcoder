@@ -65,6 +65,7 @@ function updateRemoteCode()
 		{
 			$("#status").html("Opponent Won!");
 			$("#status").css("color","orange");
+			$('#countdown').hide();
 		}
 		remoteEditor.clearSelection();
 	});
