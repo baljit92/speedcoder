@@ -1,6 +1,7 @@
 body
 {
 	height: 100%;
+	background-color: #E0E0DD;
 }
 
 #editor { 
@@ -20,9 +21,33 @@ body
 	text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
-#compileButton {
-	clear: both;
-	background-color: red;
-	height: 50px;
-	width: 100px;
+#question {
+	margin-left: auto;
+	margin-right: auto;
+	width:80%;
+	text-align: center;
+	font-family: 'EB Garamond', serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#playerLabel
+{
+	margin-left: 3%;
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+}
+
+#opponentLabel
+{
+	margin-right: 3%;
+	float: right;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+}
+
+#clear
+{
+	clear:both;
 }
