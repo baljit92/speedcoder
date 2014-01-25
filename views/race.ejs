@@ -5,9 +5,12 @@
 	<link href='http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+  <link rel="stylesheet" href="jsclock/countup/jquery.countup.css" />	
 
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script src="jsclock/countup/jquery.countup.js"></script>
+  <script src="jsclock/js/script.js"></script>
 	<script type="text/javascript" src="js/ace/ace.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript">
@@ -29,7 +32,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-center">
-            <li><a href="#about">About</a></li>
+            <li>  <div id="countdown"></div></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<li ><a id="status" href="#">Hit submit to compile!</a></li>
@@ -48,6 +51,7 @@
 	<div id="clear"></div>
 	<div id="editor"></div>
 	<div id="remoteEditor"></div>
+
 	<!-- <div id="compileButton">Compile!</div> -->
 	<!--p>Welcome to <%= title %></p-->
 </body>

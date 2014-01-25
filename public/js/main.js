@@ -36,6 +36,7 @@ function submitCode() {
 		{
 			$("#status").html("Congratulations!");
 			$("#status").css("color","green");
+			$('#countdown').hide();
 		}
 	});
 }
