@@ -5,6 +5,7 @@
 var express = require('express')
   , routes = require('./routes')
   , compile = require('./routes/compile')
+  , code = require('./routes/code')
   , path = require('path');
 
 var app = express();
@@ -29,6 +30,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.post('/code_submit', compile.compiler);
+app.post('/add_code', code.addCode);
+app.post('/get_code', code.getCode);
 
 app.listen(8000, function(){
     console.log('Server running at http://127.0.0.1:8000/');
